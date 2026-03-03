@@ -1,8 +1,15 @@
 # Lab 1 — Forward Kinematics of a 6-DOF Robotic Manipulator using the Denavit-Hartenberg Convention
 
-> **Course:** Robot Modeling and Identification (MIR)
-> **Author:** Umer Ahmed Baig Mughal — MSc Robotics and Artificial Intelligence
-> **Topic:** Forward Kinematics · Homogeneous Transformation Matrices · DH Parameters · Euler Angle Extraction · 3D Kinematic Chain Visualisation
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![NumPy](https://img.shields.io/badge/NumPy-Required-orange)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3D-green)
+![Robotics](https://img.shields.io/badge/Field-Robotics-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+
+> **Course:** Robot Modeling and Identification (MIR) <br>
+> **Author:** Umer Ahmed Baig Mughal — MSc Robotics and Artificial Intelligence <br>
+> **Topic:** Forward Kinematics · Homogeneous Transformation Matrices · DH Parameters · Euler Angle Extraction · 3D Kinematic Chain Visualization
 
 ---
 
@@ -21,11 +28,11 @@
    - [File Structure](#file-structure)
    - [Function Reference](#function-reference)
    - [Code Walkthrough](#code-walkthrough)
-5. [3D Visualisation](#3d-visualisation)
-   - [How the Visualisation Works](#how-the-visualisation-works)
-   - [Visualisation Walkthrough](#visualisation-walkthrough)
+5. [3D Visualization](#3d-visualization)
+   - [How the Visualization Works](#how-the-visualization-works)
+   - [Visualization Walkthrough](#visualization-walkthrough)
    - [Interpreting the Plot](#interpreting-the-plot)
-6. [Usage](#usage)
+6. [How to Run](#how-to-run)
 7. [Results](#results)
 8. [Dependencies](#dependencies)
 9. [Notes and Limitations](#notes-and-limitations)
@@ -36,7 +43,7 @@
 
 ## Objective
 
-This lab implements the **forward kinematics** of a six-degree-of-freedom (6-DOF) serial robotic manipulator from scratch using the classical **Denavit-Hartenberg (DH) parameterisation**. Given a set of joint angles, the algorithm computes the **position and orientation** (pose) of the end-effector with respect to the base frame. The lab is further extended with an **interactive 3D visualisation** of the full kinematic chain, rendering each joint frame origin and the connecting links in three-dimensional space.
+This lab implements the **forward kinematics** of a six-degree-of-freedom (6-DOF) serial robotic manipulator from scratch using the classical **Denavit-Hartenberg (DH) parameterisation**. Given a set of joint angles, the algorithm computes the **position and orientation** (pose) of the end-effector with respect to the base frame. The lab is further extended with an **interactive 3D visualization** of the full kinematic chain, rendering each joint frame origin and the connecting links in three-dimensional space.
 
 The key learning outcomes are:
 
@@ -72,8 +79,8 @@ The transformation from frame *i−1* to frame *i* is encoded in the 4×4 matrix
 ```
         ┌  cos θᵢ   -sin θᵢ cos αᵢ    sin θᵢ sin αᵢ   aᵢ cos θᵢ ┐
 ᵢ⁻¹Tᵢ = │  sin θᵢ    cos θᵢ cos αᵢ   -cos θᵢ sin αᵢ   aᵢ sin θᵢ │
-        │  0          sin αᵢ            cos αᵢ           dᵢ        │
-        └  0          0                 0                1          ┘
+        │  0          sin αᵢ            cos αᵢ           dᵢ     │
+        └  0          0                 0                1      ┘
 ```
 
 This matrix encapsulates both the **rotation** (upper-left 3×3 block) and the **translation** (right-most column) that relate two consecutive coordinate frames.
@@ -157,7 +164,9 @@ This shifts joint 3 by 90° to align the kinematic model with the physical robot
 
 ```
 Lab_1/
-└── MIR_Task_1.py       # Forward kinematics + 3D kinematic chain visualisation
+└── RMI_Task_1.py       # Forward kinematics + 3D kinematic chain visualization
+├── Results/
+│   └── lab1_robot.png
 ```
 
 ### Function Reference
@@ -196,7 +205,7 @@ Computes the **complete forward kinematics** of the 6-DOF manipulator.
 
 #### `forward_kinematics_with_frames(joint_angles, a, d, alpha) → list[np.ndarray]`
 
-An extended variant of `forward_kinematics` that, instead of returning only the final end-effector pose, returns **all intermediate 4×4 transformation matrices** — one for the base frame and one for each joint frame up to and including the end-effector. This provides the spatial coordinates of every joint origin, which are required for visualisation.
+An extended variant of `forward_kinematics` that, instead of returning only the final end-effector pose, returns **all intermediate 4×4 transformation matrices** — one for the base frame and one for each joint frame up to and including the end-effector. This provides the spatial coordinates of every joint origin, which are required for visualization.
 
 | Argument       | Type            | Description                                      |
 |----------------|-----------------|--------------------------------------------------|
@@ -254,11 +263,11 @@ R = T[:3, :3]
 
 ---
 
-## 3D Visualisation
+## 3D Visualization
 
-### How the Visualisation Works
+### How the Visualization Works
 
-The visualisation pipeline extends the core forward kinematics algorithm by capturing and preserving the **complete spatial trajectory** of all seven coordinate frames (base + 6 joints) as the kinematic chain is assembled. Rather than discarding intermediate transformation results, `forward_kinematics_with_frames` stores a snapshot of the cumulative transformation matrix after each joint multiplication.
+The visualization pipeline extends the core forward kinematics algorithm by capturing and preserving the **complete spatial trajectory** of all seven coordinate frames (base + 6 joints) as the kinematic chain is assembled. Rather than discarding intermediate transformation results, `forward_kinematics_with_frames` stores a snapshot of the cumulative transformation matrix after each joint multiplication.
 
 The key insight is that **column 4 (the translation vector) of each 4×4 transformation matrix encodes the position of that joint's origin** in the base coordinate frame. Extracting these seven position vectors and connecting them in sequence produces a geometrically accurate skeleton of the robot arm.
 
@@ -268,7 +277,7 @@ Frame 0 (Base)  →  Frame 1 (Joint 1)  →  Frame 2 (Joint 2)  →  ...  →  F
   [0,0,0]            T₁[:3,3]               T₁₂[:3,3]                    T₁₂₃₄₅₆[:3,3]
 ```
 
-### Visualisation Walkthrough
+### Visualization Walkthrough
 
 ```python
 # Step 1 — Generate all 7 intermediate frame matrices (base + 6 joints)
@@ -291,6 +300,11 @@ zs = [T[2, 3] for T in frames]   # Z coordinates
 # Step 3 — Plot the kinematic chain as a connected 3D polyline
 ax.plot(xs, ys, zs, marker='o')  # Lines = links, circles = joint origins
 ```
+
+### Example Output
+
+![Robot Visualization](Results/lab1_robot.png)
+
 
 ### Interpreting the Plot
 
@@ -317,11 +331,18 @@ For the test configuration `[1.1, 1.2, 1.3, 1.4, 1.5, 1.7]` rad, the end-effecto
 
 ---
 
-## Usage
+## How to Run
+
+### Clone the repository and navigate to the lab directory:
+
+```bash 
+git clone https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification.git
+cd Robot-Modeling-and-Identification/Lab1
+```
 
 ### Prerequisites
 
-Ensure Python 3.7+ and all required packages are installed:
+Ensure Python 3.8+ and all required packages are installed:
 
 ```bash
 pip install numpy matplotlib
@@ -330,7 +351,7 @@ pip install numpy matplotlib
 ### Running the Script
 
 ```bash
-python MIR_Task_1.py
+python RMI_Task_1.py
 ```
 
 The script will first print the numerical end-effector pose to the terminal, then open an **interactive 3D Matplotlib window** showing the full kinematic chain. The plot can be rotated, panned, and zoomed using the mouse.
@@ -388,8 +409,9 @@ End-Effector Pose (x, y, z, phi, theta, psi):
 
 | Package | Version | Purpose |
 |---------|---------|---------|
-| `numpy` | ≥ 1.21  | Matrix construction, trigonometric functions, linear algebra |
-| `matplotlib` | ≥ 3.4 | 3D kinematic chain visualisation (`mpl_toolkits.mplot3d`) |
+| `Python` | ≥ 3.8  | Runtime environment |
+| `Numpy` | ≥ 1.21  | Matrix operations, DH transformations, trigonometric functions |
+| `Matplotlib` | ≥ 3.4 | 3D kinematic chain visualization (`mpl_toolkits.mplot3d`) |
 
 Both packages are available via pip and are standard in any scientific Python environment (Anaconda, conda-forge, etc.).
 
@@ -402,16 +424,16 @@ Both packages are available via pip and are standard in any scientific Python en
 - **Joint type:** All six joints are treated as **revolute**. Extending to prismatic joints would require making `d` the variable parameter for the relevant joint(s).
 - **Singularity handling:** The three-branch Euler extraction guards against the two canonical singularity postures (θ = 0 and θ = π). Configurations near these postures may still exhibit reduced numerical accuracy due to finite floating-point precision.
 - **No collision or joint-limit checking** is performed; the function will return a pose for any input regardless of physical reachability.
-- **Visualisation scope:** The plot renders only joint origin positions connected by straight lines. It does not visualise link cross-sections, coordinate frame axes (x/y/z triads), or end-effector orientation. Axis triad rendering can be added by extracting and plotting the column vectors of each frame's rotation matrix as arrows using `ax.quiver`.
-- **Plot interactivity:** The Matplotlib 3D window supports mouse-driven rotation and zoom. For richer interactivity (animated configuration sweep, real-time joint-angle sliders), consider integrating `matplotlib.widgets.Slider` or migrating to a dedicated robotics visualisation library such as `roboticstoolbox-python` or `PyBullet`.
+- **Visualization scope:** The plot renders only joint origin positions connected by straight lines. It does not visualize link cross-sections, coordinate frame axes (x/y/z triads), or end-effector orientation. Axis triad rendering can be added by extracting and plotting the column vectors of each frame's rotation matrix as arrows using `ax.quiver`.
+- **Plot interactivity:** The Matplotlib 3D window supports mouse-driven rotation and zoom. For richer interactivity (animated configuration sweep, real-time joint-angle sliders), consider integrating `matplotlib.widgets.Slider` or migrating to a dedicated robotics visualization library such as `roboticstoolbox-python` or `PyBullet`.
 
 ---
 
 ## Author
 
-**Umer Ahmed Baig Mughal**
-Master's in Robotics and Artificial Intelligence
-*Specialization: Computer Vision · Robot Modeling · Perception · Autonomous Systems*
+**Umer Ahmed Baig Mughal** <br>
+Master's in Robotics and Artificial Intelligence <br>
+*Specialization: Computer Vision · Robot Modeling and Control · Perception · Autonomous Systems*
 
 ---
 
