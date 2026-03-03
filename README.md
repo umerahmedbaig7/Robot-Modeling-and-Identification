@@ -200,7 +200,7 @@ Output: q = [0.10, 0.20, 0.30, 0.40, 0.50, 0.70]  rad
         FK verification error = 0.000000 m  ✓
 ```
 
-📂 **[→ View Lab 2 Full Documentation](Lab2/README.md)**
+📂 **[→ View Lab 2 Full Documentation](https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification/Lab_2/README.md)**
 
 ---
 
