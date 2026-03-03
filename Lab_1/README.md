@@ -335,8 +335,8 @@ For the test configuration `[1.1, 1.2, 1.3, 1.4, 1.5, 1.7]` rad, the end-effecto
 
 ### Clone the repository and navigate to the lab directory:
 
-```bash 
-git clone https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification.git
+```bash
+git clone [https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification.git]
 cd Robot-Modeling-and-Identification/Lab1
 ```
 
