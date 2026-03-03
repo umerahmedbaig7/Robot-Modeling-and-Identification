@@ -439,7 +439,7 @@ Master's in Robotics and Artificial Intelligence <br>
 
 ## License
 
-This project is intended for **academic and research use**. It was developed as part of the *Robot Modeling and Identification* course within the MSc Robotics and Artificial Intelligence programme. Redistribution, modification, and use in derivative academic work are permitted with appropriate attribution to the original author.
+This project is intended for **academic and research use**. It was developed as part of the *Robot Modeling and Identification* course within the MSc Robotics and Artificial Intelligence program. Redistribution, modification, and use in derivative academic work are permitted with appropriate attribution to the original author.
 
 ---
 
