@@ -65,7 +65,7 @@ All solutions are implemented entirely from first principles in **Python**, usin
 📦 Robot-Modeling-and-Identification/
 │
 ├── 📁 Lab1/
-│   ├── 🐍 MIR_Task_1.py          # Forward kinematics + 3D visualization
+│   ├── 🐍 RMI_Task_1.py          # Forward kinematics + 3D visualization
 │   ├── 📄 README.md              # Lab 1 documentation
 │   └── 📁 Results/
 │       └── 🖼️ lab1_robot.png     # 3D kinematic chain plot
@@ -151,7 +151,7 @@ Input:  joint_angles = [1.1, 1.2, 1.3, 1.4, 1.5, 1.7]  rad
 Output: End-Effector Pose → [x=0.61, y=−0.98, z=2.44, φ=−0.63, θ=1.66, ψ=2.62]
 ```
 
-📂 **[→ View Lab 1 Full Documentation](./main/Lab_1/README.md)**
+📂 **[→ View Lab 1 Full Documentation](https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification/blob/main/Lab_1/README.md)**
 
 ---
 
