@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 
-> **Course:** Robot Modeling and Identification (MIR) <br>
+> **Course:** Robot Modeling and Identification (RMI) <br>
 > **Author:** Umer Ahmed Baig Mughal — MSc Robotics and Artificial Intelligence <br>
 > **Topic:** Forward Kinematics · Homogeneous Transformation Matrices · DH Parameters · Euler Angle Extraction · 3D Kinematic Chain Visualization
 
