@@ -200,7 +200,7 @@ Output: q = [0.10, 0.20, 0.30, 0.40, 0.50, 0.70]  rad
         FK verification error = 0.000000 m  ✓
 ```
 
-📂 **[→ View Lab 2 Full Documentation](https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification/Lab_2/README.md)**
+📂 **[→ View Lab 2 Full Documentation](https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification/blob/main/Lab_2/README.md)**
 
 ---
 
@@ -256,7 +256,7 @@ Jacobian Matrix J(q):
 Rank: 6 (full) | det: 0.2898 | Manipulability: 0.2898
 ```
 
-📂 **[→ View Lab 3 Full Documentation](Lab3/README.md)**
+📂 **[→ View Lab 3 Full Documentation](https://github.com/umerahmedbaig7/Robot-Modeling-and-Identification/blob/main/Lab_3/README.md)**
 
 ---
 
