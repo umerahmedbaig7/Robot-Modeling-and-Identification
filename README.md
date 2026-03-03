@@ -12,7 +12,7 @@
 
 <br>
 
-> *"To command a robot, you must first speak the language of mathematics it was built upon."*
+ *"To command a robot, you must first speak the language of mathematics it was built upon."*
 
 <br>
 
@@ -66,19 +66,19 @@ All solutions are implemented entirely from first principles in **Python**, usin
 │
 ├── 📁 Lab1/
 │   ├── 🐍 MIR_Task_1.py          # Forward kinematics + 3D visualization
-│   ├── 📄 README.md               # Lab 1 documentation
+│   ├── 📄 README.md              # Lab 1 documentation
 │   └── 📁 Results/
 │       └── 🖼️ lab1_robot.png     # 3D kinematic chain plot
 │
 ├── 📁 Lab2/
 │   ├── 🐍 RMI_Task_2.py          # Inverse kinematics + 3D visualization
-│   ├── 📄 README.md               # Lab 2 documentation
+│   ├── 📄 README.md              # Lab 2 documentation
 │   └── 📁 Results/
 │       └── 🖼️ lab2_robot.png     # 3D arm configuration plot
 │
 ├── 📁 Lab3/
 │   ├── 🐍 RMI_Task_3.py          # Jacobian computation + 3D visualization
-│   ├── 📄 README.md               # Lab 3 documentation
+│   ├── 📄 README.md              # Lab 3 documentation
 │   └── 📁 Results/
 │       └── 🖼️ lab3_robot.png     # 3D arm configuration plot
 │
