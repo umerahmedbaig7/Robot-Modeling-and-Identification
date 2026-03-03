@@ -5,7 +5,7 @@
 ![SymPy](https://img.shields.io/badge/SymPy-Symbolic-purple)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3D-green)
 ![Robotics](https://img.shields.io/badge/Field-Robotics-red)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![License](https://img.shields.io/badge/License-MIT-yellow) 
 
 > **Course:** Robot Modeling and Identification (RMI) <br>
 > **Author:** Umer Ahmed Baig Mughal — MSc Robotics and Artificial Intelligence <br>
