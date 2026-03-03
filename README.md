@@ -151,7 +151,7 @@ Input:  joint_angles = [1.1, 1.2, 1.3, 1.4, 1.5, 1.7]  rad
 Output: End-Effector Pose → [x=0.61, y=−0.98, z=2.44, φ=−0.63, θ=1.66, ψ=2.62]
 ```
 
-📂 **[→ View Lab 1 Full Documentation](./umerahmedbaig7/Robot-Modeling-and-Identification/Lab1/README.md)**
+📂 **[→ View Lab 1 Full Documentation](./main/Lab_1/README.md)**
 
 ---
 
