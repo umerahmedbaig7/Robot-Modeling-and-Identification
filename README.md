@@ -12,7 +12,7 @@
 
 <br>
 
- *"To command a robot, you must first speak the language of mathematics it was built upon."*
+> *"To command a robot, you must first speak the language of mathematics it was built upon."*
 
 <br>
 
