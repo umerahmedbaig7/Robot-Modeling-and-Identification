@@ -18,7 +18,7 @@
 
 **Author:** Umer Ahmed Baig Mughal <br>
 **Programme:** MSc Robotics and Artificial Intelligence <br>
-**Specialization:** Computer Vision · Robot Modeling and Control · Perception · Autonomous Systems
+**Specialization:** Autonomous Systems · Machine Learning · Computer Vision · Robot Modeling and Control · Human-Robot Interaction
 
 </div>
 
