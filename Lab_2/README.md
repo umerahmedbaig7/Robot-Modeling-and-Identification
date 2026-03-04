@@ -40,7 +40,7 @@
 12. [License](#license)
 
 ---
-
+ 
 ## Objective
 
 This lab solves the **inverse kinematics (IK)** problem for a six-degree-of-freedom (6-DOF) serial robotic manipulator — the mathematical inverse of Lab 1. Given a desired end-effector **position and orientation** (pose) expressed as `[x, y, z, φ, θ, ψ]`, the algorithm computes the six joint angles `[q₁, q₂, q₃, q₄, q₅, q₆]` that realise that pose.
