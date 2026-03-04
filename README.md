@@ -42,7 +42,7 @@
 - [📄 License](#-license)
 
 ---
-
+ 
 ## 📖 About This Repository
 
 This repository contains the complete implementation of all three laboratory assignments from the **Robot Modeling and Identification (RMI)** course, part of the MSc in Robotics and Artificial Intelligence. Every lab builds upon the mathematical foundations established in the previous one, forming a coherent and progressive study of the kinematics and velocity analysis of a 6-degree-of-freedom (6-DOF) serial robotic manipulator.
