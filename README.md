@@ -18,7 +18,7 @@
 
 **Author:** Umer Ahmed Baig Mughal <br>
 **Programme:** MSc Robotics and Artificial Intelligence <br>
-**Specialization:** Autonomous Systems · Machine Learning · Computer Vision · Robot Modeling and Control · Human-Robot Interaction
+**Specialization:** Machine Learning · Computer Vision · Human-Robot Interaction · Autonomous Systems · Robotic Motion Control
 
 </div>
 
@@ -416,7 +416,7 @@ Each script prints its numerical output to the terminal and opens an **interacti
 ### Umer Ahmed Baig Mughal
 
 🎓 **MSc Robotics and Artificial Intelligence** <br>
-🔬 *Specialisation: Computer Vision · Robot Modeling and Control · Perception · Autonomous Systems*
+🔬 *Specialization: Machine Learning · Computer Vision · Human-Robot Interaction · Autonomous Systems · Robotic Motion Control*
 
 [![GitHub](https://img.shields.io/badge/GitHub-umerahmedbaig7-181717?style=for-the-badge&logo=github)](https://github.com/umerahmedbaig7)
 
