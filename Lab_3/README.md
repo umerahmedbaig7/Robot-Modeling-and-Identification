@@ -486,7 +486,7 @@ All packages are available via pip and are standard in any scientific Python dis
 
 **Umer Ahmed Baig Mughal** <br>
 Master's in Robotics and Artificial Intelligence <br>
-*Specialization: Computer Vision · Robot Modeling and Control · Perception · Autonomous Systems*
+*Specialization: Machine Learning · Computer Vision · Human-Robot Interaction · Autonomous Systems · Robotic Motion Control*
 
 ---
 
