@@ -44,7 +44,7 @@
 11. [License](#license)
 
 ---
-
+ 
 ## Objective
 
 This lab computes the **geometric Jacobian matrix** of a six-degree-of-freedom (6-DOF) serial robotic manipulator using **symbolic differentiation** via the SymPy computer algebra system. The Jacobian is the fundamental linear map relating joint-space velocities to end-effector Cartesian velocities — a quantity central to velocity kinematics, force control, singularity analysis, and motion planning.
